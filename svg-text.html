@@ -8,8 +8,19 @@
   				font-size: 16px;
 			}
 
+			svg anchorText {
+				fill: grey;
+				font-size: 2em;
+			}
+
 			svg text {
 				font-size: 1.5em;
+			}
+
+			svg .partyText {
+				fill:lightgrey;
+				stroke: red;
+				font-family: Comic Sans MS;
 			}
 
 			.textDemo {
@@ -22,6 +33,12 @@
 		<p>Responsive SVG text</p>
 		<svg class="textDemo" viewBox="0 0 600 400"> 
 			<text x="10%" y="25%">SVG text, now in SVG only</text>
+
+			<text x="10%" y="35%" class="partyText">Party like it's 1999!</text>
+
+	       	<text x="10%" y="45%" class="anchorText">Anchor's away! Or not...</text>
+       		<circle cx="10%" cy="45%" r="4" fill="magenta"/>
+       		<line x1="10%" y1="45%" x2="49.5%" y2="45%" stroke="magenta"/>
 		</svg>
 	</body>
 </html>
