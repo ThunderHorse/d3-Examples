@@ -4,10 +4,74 @@
 		<meta charset="utf-8">
 		<title>D3 Styles</title>
 		<style>
-		
+			.boldText {
+				font-weight: bold;
+			}
+
+			svg {
+				border: solid 1px black;
+			}
+
+			svg .almondCircle {
+				fill: BlanchedAlmond;
+			}
+
+			svg .blueCircle {
+				fill: none;
+				stroke: #0000FF;
+				stroke-width: 5;
+			}
+
+			svg .dasharray-demo{
+		       stroke:darkmagenta;
+		       stroke-width:3;
+			}
+
+			svg .linecap-demo {
+			       stroke:darkmagenta;
+			       stroke-width:5;
+			}
+
+			svg .magentaCircle {
+				fill: rgb(139, 0, 139);
+			}
+
+			svg .transparentBlueCircle {
+				fill: blue;
+				fill-opacity: 0.5;
+			}
 		</style>
 	</head>
 	<body>
+		<svg class="stylesDemo" viewBox="0 0 600 400">
+			<circle cx="5%" cy="5%" r="20" class="almondCircle" />
+			<circle cx="15%" cy="5%" r="20" class="blueCircle" />
+			<circle cx="25%" cy="5%" r="20" class="magentaCirfcle" />
 
+			<circle cx="13%" cy="20%" r="20" class="magentaCircle" />
+			<circle cx="19%" cy="20%" r="20" class="transparentBlueCircle" /> 
+
+			<text x="1%" y="35%" class="boldText">Linecaps</text>
+
+			<text x="1%" y="40%">Butt</text> 
+			<line x1="10%" y1="39%" x2="60%" y2="39%" class="linecap-demo" stroke-linecap="butt" />
+
+			<text x="1%" y="45%">Round</text>
+			<line x1="10%" y1="44%" x2="60%" y2="44%" class="linecap-demo" stroke-linecap="round" />
+
+			<text x="1%" y="50%">Square</text>
+			<line x1="10%" y1="49%" x2="60%" y2="49%" class="linecap-demo" stroke-linecap="square" />
+
+			<text x="1%" y="60%" class="boldText">Dasharrays</text>
+
+			<text x="1%" y="65%">1 1</text>
+			<line x1="25%" y1="64%" x2="60%" y2="64%" class="dasharray-demo" stroke-dasharray="1 1" />
+
+			<text x="1%" y="70%">10 4 4 4</text>
+			<line x1="25%" y1="69%" x2="60%" y2="69%" class="dasharray-demo" stroke-dasharray="10 4 4 4" />
+
+			<text x="1%" y="75%">5 10 1 20 30 5</text>
+			<line x1="25%" y1="74%" x2="60%" y2="74%" class="dasharray-demo" stroke-dasharray="5 10 1 20 30 5" />
+		</svg>
 	</body>
 </html>
