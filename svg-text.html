@@ -2,10 +2,22 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-
+		<title>D3 Text</title>
 		<style>
 			html {
   				font-size: 16px;
+			}
+
+			svg a {
+				fill: blue;
+			}
+
+			svg a:visited {
+				fill:purple;
+			}
+
+			svg a:hover {
+				text-decoration: underline;
 			}
 
 			svg anchorText {
@@ -15,6 +27,10 @@
 
 			svg text {
 				font-size: 1.5em;
+			}
+
+			svg .linkText {
+				font-size: 1em;
 			}
 
 			svg .partyText {
@@ -51,6 +67,8 @@
 	       <text x="100%" y="70%" text-anchor="end">This text is</text>
 	       <text x="100%" y="76%" text-anchor="end">aligned</text>
 	       <text x="100%" y="82%" text-anchor="end">to the right</text>
+
+	       <text x="10%" y="90%" class="linkText">Here's where to go to <a xlink:href="/getfile?safari4=true&item=/images/9780133439649/assets/http://www.w3schools.com/svg/svg_text.asp">learn more about SVG text</a>, including how to rotate it</text>
 		</svg>
 	</body>
 </html>
