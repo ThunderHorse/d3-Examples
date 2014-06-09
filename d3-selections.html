@@ -21,7 +21,37 @@
       </div>
 
 <script>
-      // Your JavaScript goes here
+      //Various methods for element selection in d3
+      var txt = d3.select("p").text(); //Get text value
+      //var txt = d3.select("p")[0][0]; //Grabs element not text
+      alert("The first <p> tags inner text is: " + txt);
+
+      //Altering Text
+      alert("Now changing text above circle by utilizing d3");
+      d3.select("p").text("This is a circle, eh?");
+
+      //Example of Grabbing element via css selector
+      //Also good examples of assigning selections to re-usable vars
+      var footer = d3.select(".footer")[0][0]; //Grabs first element of class footer that is on page
+      var header = d3.select("#header"); //Grabs element with id of header
+
+      var circle = d3.select("svg circle"); //Grabs circle element within svg. Prepend 'svg' as a best practice
+
+      //Example of selecting element within another selection (utilizing method chaining)
+      var chain = d3.select(".footer").select("p");
+
+      //Examples of changing a selections attributes
+      alert("Now changing circle fill to red");
+      circle.attr("fill", "red");
+
+      alert("Now changing circle radius to 5");
+      circle.attr("r", 5);
+
+      alert("Now changing circle to put stroke around it");
+      circle.attr("stroke", "black");
+
+      alert("Now changing font style of first paragraph to Arial")
+      d3.select("p").style("font-family" , "Arial");
 </script>
 </body>
 </html>
