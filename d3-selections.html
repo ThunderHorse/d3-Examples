@@ -52,6 +52,23 @@
 
       alert("Now changing font style of first paragraph to Arial")
       d3.select("p").style("font-family" , "Arial");
+
+      //Demonstrating creating new selection in middle of chain
+      alert("Look at code to see how this creates a new selection mid chain")
+      var myGraf = d3.select('#header')
+                        .style("background-color", "BlanchedAlmond")
+                  .select("p")
+                        .style("color", "DarkCyan")
+                        .style("font-family", "Arial")
+                        .style("font-weight", "bold");
+
+      alert("Look at code to see how you can store selections and chaining for later use");
+      //Demonstrating Chains and Variable Assignment
+      var myCircle = d3.select("circle")
+                        .attr("fill", "red")
+                        .attr("r", 10)
+                        .attr("stroke", "black")
+                        .attr("stroke-width", 2);
 </script>
 </body>
 </html>
