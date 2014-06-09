@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>D3 SelectAll</title>
+<style>
+      /* Your CSS goes here */
+</style>
+</head>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+      <div id="header">
+            <p>Is this a circle?</p>
+      </div>
+      <svg width="500px" height="40px">
+            <circle r="20" cx="50" cy="20"/>
+      </svg>
+      <div class="footer">
+            <p>Yeah, looks like it</p>
+      </div>
+
+<script>
+      alert("Using selectAll to alter all p elements at once")
+
+      d3.selectAll("p")
+       .text("Stop repeating me!")
+       .style("font-family", "Arial")
+       .style("color", "DeepPink")
+       .style("font-weight", "bold");
+</script>
+</body>
+</html>
